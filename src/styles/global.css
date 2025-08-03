@@ -1,20 +1,21 @@
 /* Fonts */
 @font-face {
-  /* font-family: "CascadiaCode"; */
-  /* src: url("../assets/fonts/Cascadia_Code/static/CascadiaCode-Regular.ttf") format("truetype"); */
-  font-family: "GilroyRegular";
-  src: url("../assets/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-family: "CascadiaCode";
+  src: url("../assets/fonts/CascadiaCode/static/CascadiaCode-Regular.ttf") format("truetype");
 }
 
 /* Main Styles */
 body {
   margin: 0;
   background-color: #17191a !important;
-  font-family: "GilroyRegular", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-family: "CascadiaCode", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
   color: #aea597 !important;
   font-optical-sizing: auto;
-  font-weight: 700;
   font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: -0.4px;
+  line-height: 19px;
 }
 
 /* Disabled Link (Navbar) */

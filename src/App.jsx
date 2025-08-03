@@ -1,19 +1,24 @@
-function App() {
-  const containerStyles = {
-    margin: "50px auto",
-    width: "50%",
-    textAlign: "center",
-  };
-  const headingStyles = {
-    margin: "0px",
-  };
+import Navbar from "./components/Navbar";
 
+function App() {
   return (
-    <div style={containerStyles}>
-      <h2 style={headingStyles}>Codize</h2>
-      <div>Codize - Your Coding Memory Vault</div>
-      <p>Codize is a clean, modern, and minimal tool designed to help you document, revise, and retain your DSA journey effectively. Whether you're solving problems, tracking concepts, or reflecting on approaches, Codize keeps everything organized in one place and helps you master coding through structured revision and clear documentation.</p>
-    </div>
+    <>
+      <Navbar />
+      <div className="container mt-4">
+        <div className="row">
+          {[...Array(6)].map((_, i) => (
+            <div className="col-lg-4 col-md-6 col-sm-6 col-6 mb-4" key={i}>
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">Card {i + 1}</h5>
+                  <p className="card-text">Card content.</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
