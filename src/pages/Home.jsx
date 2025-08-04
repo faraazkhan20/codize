@@ -11,7 +11,7 @@ function Home() {
         <div className="row">
           {cardsData.map((card, i) => (
             <div className="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" key={i}>
-              <Link to={`/pages/${i}`} className="card h-100 text-decoration-none">
+              <Link to={`/pages/${card.title}`} className="card h-100 text-decoration-none">
                 <div className="card-body h-100 text-center d-flex justify-content-center align-items-center p-3">
                   <div className="card-title m-0">{card.title}</div>
                 </div>
