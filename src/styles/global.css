@@ -52,10 +52,16 @@ input[type="search"]::-webkit-search-cancel-button {
   text-align: justify;
 }
 code {
-  /* font-size: 15px; */
   background-color: #27272a;
   color: #fafafa;
   border: 2px solid #27272a;
   border-radius: 5px;
   padding: 2px;
+}
+
+h6 {
+  margin-bottom: 0px;
+}
+.content {
+  color: #ffffff8c;
 }
