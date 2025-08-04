@@ -52,9 +52,9 @@ input[type="search"]::-webkit-search-cancel-button {
   text-align: justify;
 }
 code {
-  background-color: #27272a;
+  /* background-color: #27272a; */
   color: #fafafa;
-  border: 2px solid #27272a;
+  /* border: 2px solid #27272a; */
   border-radius: 5px;
   padding: 2px;
 }
@@ -64,4 +64,18 @@ h6 {
 }
 .content {
   color: #ffffff8c;
+}
+
+.modal-content {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid white;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.1rem 0.1rem;
+}
+
+pre {
+  margin: 0px !important;
 }
