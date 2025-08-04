@@ -22,7 +22,7 @@ function Arrays() {
         </button>
 
         <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-dialog modal-dialog-centered modal-lg">
             <div className="modal-content modal-dark">
               <div className="modal-header p-1 justify-content-center" style={{ borderBottom: "0px" }}>
                 <h5 className="modal-title" id="exampleModalLabel">
@@ -30,18 +30,96 @@ function Arrays() {
                 </h5>
                 {/* <button type="button" className="btn-close btn-white" data-bs-dismiss="modal" aria-label="Close"></button> */}
               </div>
-              <div className="modal-body px-1 py-0">
-                <SyntaxHighlighter language="cpp" style={vscDarkPlus} className="rounded">
-                  {`int main() {
-  int arr[] = {1, 2, 3, 4, 5};
-  int max = INT_MIN;
-  for(int i = 0; i < 5; i++) {
-    if(arr[i] > max) {
-      max = arr[i];
-    }
-  }
-  cout << "Max: " << max;
-  return 0;
+              <div className="modal-body px-2 py-0">
+                <SyntaxHighlighter language="cpp" style={vscDarkPlus} className="rounded codeStyles">
+                  {`#include<bits/stdc++.h>
+using namespace std;
+
+// ये size variable एक global variable है क्योंकि ये सभी functions के बाहर declare किया गया है।
+int size;
+
+void printIntArray(int arr[], int size) {
+      cout << "[";
+      for(int i = 0; i < size; i++) {
+            cout << arr[i];
+            if(i != (size - 1)) cout << ", ";
+      }
+      cout << "]" << endl;
+}
+
+void printCharArray(char arr[], int size) {
+      cout << "[";
+      for(int i = 0; i < size; i++) {
+            cout << "'" << arr[i] << "'";
+            if(i != (size - 1)) cout << ", ";
+      }
+      cout << "]" << endl;
+}
+
+void insertionSort(int arr[], int size) {
+      for (int i = 1; i < size; i++) {
+            int key = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > key) {
+                  arr[j + 1] = arr[j];
+                  j--;
+            }
+            arr[j + 1] = key;
+            printIntArray(arr, size);
+      }
+}
+
+// Insertion sort में हम एक-एक करके हर एलिमेंट को उठाते हैं और उसे पहले से सही क्रम में रखे गए हिस्से में उसकी सही जगह पर रख देते हैं। ऐसे करते-करते पूरा array sort हो जाता है।
+void otherInsertionSort(int arr[], int size) {
+      for(int i = 1; i < size; i++) {
+            for(int j = 1; j > 0; j++) {
+                  if(arr[j] < arr[j - 1]) {
+                        swap(arr[j], arr[j - 1]);
+                        printIntArray(arr, size);
+                  } else {
+                        break;
+                  }
+            }
+      }
+}
+
+void decreasingInsertionSort(int arr[], int size) {
+      for(int i = 1; i < size; i++) {
+            for(int j = i; j > 0; j--) {
+                  if(arr[j] > arr[j - 1]) {
+                        swap(arr[j], arr[j - 1]);
+                  } else {
+                        break;
+                  }
+            }
+            printIntArray(arr, size);
+      }
+}
+
+void reverseInsertionSort(int arr[], int size) {
+      for(int i = size - 1; i >= 0; i--) {
+            for(int j = i; j < size - 1; j++) {
+                  if(arr[j] > arr[j + 1]) {
+                        swap(arr[j], arr[j + 1]);
+                  } else {
+                        break;
+                  }
+            }
+            printIntArray(arr, size);
+      }
+}
+
+int main() {
+      int arr[] = {5, 1, 9, 7, 2};
+      size = (sizeof(arr) / sizeof(arr[0]));
+
+      printIntArray(arr, size);
+      cout << endl;
+      // insertionSort(arr, size);
+      // decreasingInsertionSort(arr, size);
+      reverseInsertionSort(arr, size);
+
+      return 0;
 }`}
                 </SyntaxHighlighter>
               </div>
