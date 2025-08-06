@@ -2,17 +2,14 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
-      <div className="container">
-        {/* Name */}
+    <nav className="navbar navbar-expand-lg navbar-dark py-0">
+      <div className="container navbar-container py-2">
+        {/* Title */}
         <Link className="navbar-brand fw-semibold" style={{ letterSpacing: "-0.6px" }} to="/">
           Codize
         </Link>
 
         {/* Toggle Button for Offcanvas */}
-        {/* <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-          <span className="navbar-toggler-icon"></span>
-        </button> */}
         <span className="navbar-toggler navbar-toggler-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style={{ border: "0px" }}></span>
 
         {/* Offcanvas Menu */}

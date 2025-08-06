@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <Navbar />
-      <div className="container mt-4">
+      <div className="container mt-3">
         <div className="row g-2">
           {cardsData.map((card, i) => (
             <div className="col-lg-2 col-md-3 col-sm-4 col-6" key={i}>

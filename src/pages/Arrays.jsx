@@ -8,7 +8,7 @@ function Arrays() {
   return (
     <>
       <Navbar />
-      <div className="container">
+      <div className="container mt-3">
         <h4 className="text-center">Arrays</h4>
         <h6>what is arr?</h6>
         <ul>
