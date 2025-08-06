@@ -31,7 +31,7 @@ function Arrays() {
                 {/* <button type="button" className="btn-close btn-white" data-bs-dismiss="modal" aria-label="Close"></button> */}
               </div>
               <div className="modal-body px-2 py-0">
-                <SyntaxHighlighter language="cpp" style={vscDarkPlus} className="rounded codeStyles">
+                <SyntaxHighlighter language="cpp" style={vscDarkPlus} className="rounded">
                   {`#include<bits/stdc++.h>
 using namespace std;
 
